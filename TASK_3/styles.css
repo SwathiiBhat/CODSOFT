@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f3; /* Light background */
+  font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #2c3e50; /* Darker container background */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  text-align: right;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #34495e; /* Darker display background */
+  color: white; /* Text color */
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.btn {
+  padding: 20px;
+  font-size: 20px;
+  background-color: #e74c3c; /* Red button background */
+  border: none;
+  border-radius: 10px;
+  color: white; /* White text */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn.operator {
+  background-color: #2980b9; /* Blue background for operators */
+}
+
+.btn.control {
+  background-color: #f39c12; /* Yellow background for controls (C, DEL) */
+}
+
+.btn.equal {
+  background-color: #27ae60; /* Green background for equals button */
+  grid-column: span 2;
+}
+
+.btn:hover {
+  background-color: #c0392b; /* Darker red when hovered */
+}
+
+.btn.operator:hover {
+  background-color: #1a75aa; /* Darker blue on hover for operators */
+}
+
+.btn.control:hover {
+  background-color: #e67e22; /* Darker yellow for control buttons */
+}
+
+.btn.equal:hover {
+  background-color: #229954; /* Darker green for equals button */
+}
+
